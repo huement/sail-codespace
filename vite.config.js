@@ -8,9 +8,9 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
-    hmr: { host: 'huement.local' },
+    hmr: { host: 'localhost' },
     proxy: {
-      '/0.0.0.0': 'http://huement.local'
+      '/0.0.0.0': 'http://localhost'
     }
   },
   resolve: {

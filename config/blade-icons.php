@@ -1,8 +1,7 @@
 <?php
 
 return [
-
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Icons Sets
     |--------------------------------------------------------------------------
@@ -13,95 +12,91 @@ return [
     |
     */
 
-    'sets' => [
+  'sets' => [
+    'default' => [
+      /*
+            |-----------------------------------------------------------------
+            | Icons Path
+            |-----------------------------------------------------------------
+            |
+            | Provide the relative path from your app root to your SVG icons
+            | directory. Icons are loaded recursively so there's no need to
+            | list every sub-directory.
+            |
+            | Relative to the disk root when the disk option is set.
+            |
+            */
 
-        // 'default' => [
-        //
-        //     /*
-        //     |-----------------------------------------------------------------
-        //     | Icons Path
-        //     |-----------------------------------------------------------------
-        //     |
-        //     | Provide the relative path from your app root to your SVG icons
-        //     | directory. Icons are loaded recursively so there's no need to
-        //     | list every sub-directory.
-        //     |
-        //     | Relative to the disk root when the disk option is set.
-        //     |
-        //     */
-        //
-        //     'path' => 'resources/svg',
-        //
-        //     /*
-        //     |-----------------------------------------------------------------
-        //     | Filesystem Disk
-        //     |-----------------------------------------------------------------
-        //     |
-        //     | Optionally, provide a specific filesystem disk to read
-        //     | icons from. When defining a disk, the "path" option
-        //     | starts relatively from the disk root.
-        //     |
-        //     */
-        //
-        //     'disk' => '',
-        //
-        //     /*
-        //     |-----------------------------------------------------------------
-        //     | Default Prefix
-        //     |-----------------------------------------------------------------
-        //     |
-        //     | This config option allows you to define a default prefix for
-        //     | your icons. The dash separator will be applied automatically
-        //     | to every icon name. It's required and needs to be unique.
-        //     |
-        //     */
-        //
-        //     'prefix' => 'icon',
-        //
-        //     /*
-        //     |-----------------------------------------------------------------
-        //     | Fallback Icon
-        //     |-----------------------------------------------------------------
-        //     |
-        //     | This config option allows you to define a fallback
-        //     | icon when an icon in this set cannot be found.
-        //     |
-        //     */
-        //
-        //     'fallback' => '',
-        //
-        //     /*
-        //     |-----------------------------------------------------------------
-        //     | Default Set Classes
-        //     |-----------------------------------------------------------------
-        //     |
-        //     | This config option allows you to define some classes which
-        //     | will be applied by default to all icons within this set.
-        //     |
-        //     */
-        //
-        //     'class' => '',
-        //
-        //     /*
-        //     |-----------------------------------------------------------------
-        //     | Default Set Attributes
-        //     |-----------------------------------------------------------------
-        //     |
-        //     | This config option allows you to define some attributes which
-        //     | will be applied by default to all icons within this set.
-        //     |
-        //     */
-        //
-        //     'attributes' => [
-        //         // 'width' => 50,
-        //         // 'height' => 50,
-        //     ],
-        //
-        // ],
+      'path' => 'resources/svg',
 
+      /*
+            |-----------------------------------------------------------------
+            | Filesystem Disk
+            |-----------------------------------------------------------------
+            |
+            | Optionally, provide a specific filesystem disk to read
+            | icons from. When defining a disk, the "path" option
+            | starts relatively from the disk root.
+            |
+            */
+
+      'disk' => '',
+
+      /*
+            |-----------------------------------------------------------------
+            | Default Prefix
+            |-----------------------------------------------------------------
+            |
+            | This config option allows you to define a default prefix for
+            | your icons. The dash separator will be applied automatically
+            | to every icon name. It's required and needs to be unique.
+            |
+            */
+
+      'prefix' => 'icon',
+
+      /*
+            |-----------------------------------------------------------------
+            | Fallback Icon
+            |-----------------------------------------------------------------
+            |
+            | This config option allows you to define a fallback
+            | icon when an icon in this set cannot be found.
+            |
+            */
+
+      'fallback' => '',
+
+      /*
+            |-----------------------------------------------------------------
+            | Default Set Classes
+            |-----------------------------------------------------------------
+            |
+            | This config option allows you to define some classes which
+            | will be applied by default to all icons within this set.
+            |
+            */
+
+      'class' => '',
+
+      /*
+            |-----------------------------------------------------------------
+            | Default Set Attributes
+            |-----------------------------------------------------------------
+            |
+            | This config option allows you to define some attributes which
+            | will be applied by default to all icons within this set.
+            |
+            */
+
+      'attributes' => [
+        // 'width' => 50,
+        // 'height' => 50,
+      ],
     ],
+  ],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Global Default Classes
     |--------------------------------------------------------------------------
@@ -111,9 +106,9 @@ return [
     |
     */
 
-    'class' => '',
+  'class' => '',
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Global Default Attributes
     |--------------------------------------------------------------------------
@@ -123,12 +118,12 @@ return [
     |
     */
 
-    'attributes' => [
-        // 'width' => 50,
-        // 'height' => 50,
-    ],
+  'attributes' => [
+    // 'width' => 50,
+    // 'height' => 50,
+  ],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Global Fallback Icon
     |--------------------------------------------------------------------------
@@ -139,9 +134,9 @@ return [
     |
     */
 
-    'fallback' => '',
+  'fallback' => '',
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Components
     |--------------------------------------------------------------------------
@@ -151,9 +146,8 @@ return [
     |
     */
 
-    'components' => [
-
-        /*
+  'components' => [
+    /*
         |----------------------------------------------------------------------
         | Disable Components
         |----------------------------------------------------------------------
@@ -164,9 +158,9 @@ return [
         |
         */
 
-        'disabled' => false,
+    'disabled' => false,
 
-        /*
+    /*
         |----------------------------------------------------------------------
         | Default Icon Component Name
         |----------------------------------------------------------------------
@@ -176,8 +170,6 @@ return [
         |
         */
 
-        'default' => 'icon',
-
-    ],
-
+    'default' => 'icon',
+  ],
 ];
