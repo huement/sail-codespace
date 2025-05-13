@@ -23,3 +23,5 @@ app/.DS_Store
 resources/js/._*
 resources/js/src/._*.js
 resources/js/src/**/._*.js
+.env.bak
+s.sh
