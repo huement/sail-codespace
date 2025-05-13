@@ -21,9 +21,9 @@
             <div class="collapse navbar-collapse text-white" id="navcol-3">
               <ul class="navbar-nav">
                 @guest
-                    <x-hui-navlink :route="Route::is('login')" :href="route('login')" icon="bxs-contact" label="Contact" />
+                    <x-hui-navlink :route="Route::is('login')" :href="route('login')" icon="bxs-user" label="Login" />
                 @else
-                    <x-hui-navlink :route="Route::is('dashboard')" :href="route('dashboard')" icon="bxs-contact" label="Contact" />
+                    <x-hui-navlink :route="Route::is('dashboard')" :href="route('dashboard')" icon="bxs-star" label="Dashboard" />
                 @endguest
               </ul>
             </div>
