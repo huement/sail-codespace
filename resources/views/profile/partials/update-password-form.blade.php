@@ -10,7 +10,7 @@
             @method('put')
 
             <div class="row mb-3">
-                <label for="password" class="col-md-4 col-form-label text-md-end">
+                <label for="password" class="col-md-4 col-form-label text-md-right">
                     {{ __('Current Password') }}
                 </label>
 
@@ -26,7 +26,7 @@
             </div>
 
             <div class="row mb-3">
-                <label for="password" class="col-md-4 col-form-label text-md-end">
+                <label for="password" class="col-md-4 col-form-label text-md-right">
                     {{ __('New Password') }}
                 </label>
 
@@ -42,7 +42,7 @@
             </div>
 
             <div class="row mb-3">
-                <label for="password_confirmation" class="col-md-4 col-form-label text-md-end">
+                <label for="password_confirmation" class="col-md-4 col-form-label text-md-right">
                     {{ __('Confirm Password') }}
                 </label>
 

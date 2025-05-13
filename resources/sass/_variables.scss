@@ -1,0 +1,367 @@
+// ============================================================
+//  @huement/ui variables
+// ============================================================
+@use 'sass:color';
+@use 'sass:map';
+
+// $spacers: (
+//   0: 0,
+//   5: 5px,
+//   10: 10px,
+//   15: 15px,
+//   20: 20px,
+//   25: 25px,
+//   30: 30px,
+//   35: 35px,
+//   40: 40px,
+//   45: 45px,
+//   50: 50px,
+//   55: 55px,
+//   60: 60px,
+//   65: 65px,
+//   70: 70px,
+//   75: 75px,
+//   80: 80px,
+//   85: 85px,
+//   90: 90px,
+//   95: 95px,
+//   100: 100px
+// ) !default;
+
+// Grab the Defaults
+@import 'variables-bs5';
+@import 'quartz';
+
+// Harmony
+$modular-ratio: $MAJOR_THIRD;
+$line-height-base: 1.5;
+$block-spacing: 1.5rem;
+$vertical-unit: 0.5rem;
+$main-unit: rem;
+$main-indent: 0.24rem;
+
+// GRID CONFIG
+$grid-columns: 12;
+$grid-gutter-width: 1.5rem;
+$grid-row-columns: 6;
+$container-padding-x: $grid-gutter-width;
+$break-point-limit: 'medium';
+$tile-spacing: 0.75rem;
+
+// Body
+$body-bg: #212121;
+$wave-bg: #111111;
+$btm-bg: #131313;
+$dark-bg: #181818;
+$black: #0f0f0f !default;
+$post-bg: #030303 !default;
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.2);
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075);
+$box-shadow-lg: 0 1rem 3rem rgba($black, 0.3);
+
+// Typography
+$font-path: '/public/fonts/';
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Bootstrap Config
+$enable-rounded: true;
+$enable-shadows: true;
+$enable-gradients: false;
+$enable-transitions: true;
+$enable-hover-media-query: false; // Deprecated, no longer affects any compiled CSS
+$enable-fonts-import: true;
+$enable-caret: true;
+
+$enable-reduced-motion: true;
+$enable-smooth-scroll: true;
+$enable-grid-classes: true;
+$enable-container-classes: true;
+$enable-cssgrid: false;
+$enable-button-pointers: true;
+$enable-rfs: true;
+$enable-validation-icons: true;
+$enable-negative-margins: false;
+$enable-deprecation-messages: true;
+$enable-important-utilities: true;
+$enable-display-sizes: true;
+$include-column-box-sizing: true;
+
+$enable-dark-mode: true; // dark is the new default
+$color-mode-type: data; // `data` or `media-query`
+
+$enable-fills: true;
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3
+);
+
+// Caution: Using a large number of various spacings will complicate having a
+// vertical or horizontal rhythm. consider adjusting the maps instead of trying
+// to keep track of what sizes are in play.
+$sz_1: 0.25rem;
+$sz_2: 0.5rem;
+$sz_3: 0.75rem;
+$sz_4: 1rem;
+$sz_5: 1.25rem;
+$sz_6: 1.5rem;
+$sz_7: 1.75rem;
+$sz_8: 2rem;
+$sz_9: 2.5rem;
+$sz_10: 2.75rem;
+$sz_11: 3rem;
+$sz_12: 3.5rem;
+$sz_13: 4rem;
+$sz_14: 5rem;
+$sz_16: 6rem;
+$sz_17: 7rem;
+$sz_18: 8rem;
+$sz_19: 9rem;
+$sz_20: 10rem;
+$sz_30: 20rem;
+$sz_40: 30rem;
+$sz_50: 40rem;
+$sz_60: 50rem;
+$sz_70: 60rem;
+$sz_80: 70rem;
+
+$negative-spacers: if(
+  $enable-negative-margins,
+  negativify-map($spacers),
+  null
+) !default;
+
+$gutters: $spacers;
+
+//
+// Typography Variables
+
+$font-sizes: (
+  xs: 0.875rem,
+  // 14px
+  sm: 1rem,
+  // 16px
+  md: 1.25rem,
+  // 30px
+  lg: 1.5rem,
+  // 24px
+  xl: 2rem,
+  // 32px
+  xx: 3rem,
+  // 48px
+);
+
+$font-line-sizes: (
+  xs: map.get($font-sizes, 'xs') * $line-height-base,
+  sm: map.get($font-sizes, 'sm') * $line-height-base,
+  md: map.get($font-sizes, 'md') * $line-height-base,
+  lg: map.get($font-sizes, 'lg') * $line-height-base,
+  xl: map.get($font-sizes, 'xl') * $line-height-base,
+  xx: map.get($font-sizes, 'xx') * $line-height-base
+);
+
+//
+// Title, Subtitle, Display Font Variables
+//
+
+$title-size: 3.5rem;
+$title-weight: 700;
+$title-strong-weight: inherit;
+
+$subtitle-size: 2rem;
+$subtitle-weight: 400;
+$subtitle-strong-weight: 500;
+
+$display-font-family: null;
+$display-font-style: null;
+$display-font-weight: 300;
+$display-line-height: 1.2;
+
+$display-font-sizes: if(
+  $enable-display-sizes,
+  (
+    1: 5rem,
+    2: 4.5rem,
+    3: 4rem,
+    4: 3.5rem,
+    5: 3rem,
+    6: 2.5rem
+  ),
+  null
+);
+
+// Optionally Load Fonts this way
+// Default theme will turn this off in the theme file unless you remove it
+// which will then fallback to this.
+$google-fonts-import: 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600|Roboto+Mono'; // Includes: Poppins: Light, Regular, Medium, Semi-bold; Roboto Mono: Regular
+
+// $font-family-poppins-first:
+//   'Poppins',
+//   -apple-system,
+//   BlinkMacSystemFont,
+//   'Segoe UI',
+//   Roboto,
+//   'Helvetica Neue',
+//   Arial,
+//   sans-serif;
+// $font-family-system-first: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+//  'Helvetica Neue', Arial, sans-serif;
+// $font-family-roboto-mono-first: 'Roboto Mono', Menlo, Monaco, Consolas,
+//  'Liberation Mono', 'Courier New', monospace;
+
+$font-family-ui: map.get($UIFont, 'family'), $SansStack;
+$font-family-system-first: map.get($PrimaryFont, 'family'), $SansStack;
+$font-family-mono-first: map.get($CodeFont, 'family'), $MonoStack;
+$font-family-headings: map.get($HeadingFont, 'family'),
+  map.get($HeadingFont, 'stack');
+
+$font-family-sans-serif: $font-family-system-first;
+$font-family-monospace: $font-family-mono-first;
+$font-family-base: $font-family-sans-serif;
+
+// $font-family-base: "Jost";
+// $font-family-code: "Space Mono";
+
+// Typography Variables
+// ============================================================================
+// TODO: sort out the heading variables!!!
+$base-font-map: map.get($chords, 'md');
+$base-headings-map: map.get($base-font-map, 'headings');
+$base-headingspx-map: map.get($base-font-map, 'headings_px');
+$base-scale: map.get($base-font-map, 'scale');
+
+$font-weight-base: $font-weight-normal;
+
+$font-size-root: strip-units(map.get($font-sizes, 'sm'));
+$font-size-base: map.get($font-sizes, 'sm');
+$font-size-lg: map.get($font-sizes, 'lg');
+$font-size-sm: map.get($font-sizes, 'xs');
+
+$font-weight-lighter: lighter;
+$font-weight-light: (map.get($PrimaryFont, 'weight') - 100);
+$font-weight-normal: map.get($PrimaryFont, 'weight');
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+$font-weight-base: $font-weight-normal;
+
+// $h1-font-size: $font-size-base * 2.5;
+// $h2-font-size: $font-size-base * 2;
+// $h3-font-size: $font-size-base * 1.75;
+// $h4-font-size: $font-size-base * 1.5;
+// $h5-font-size: $font-size-base * 1.25;
+// $h6-font-size: $font-size-base;
+
+$font-sizes: (
+  1: map.get($base-headings-map, 'h1'),
+  2: map.get($base-headings-map, 'h2'),
+  3: map.get($base-headings-map, 'h3'),
+  4: map.get($base-headings-map, 'h4'),
+  5: map.get($base-headings-map, 'h5'),
+  6: map.get($base-headings-map, 'h6')
+);
+
+$font-weight-normal: map.get($PrimaryFont, 'weight');
+$font-weight-bold: 700;
+
+$font-weight-base: $font-weight-normal;
+
+$h1-font-size: 3.052rem;
+$h2-font-size: 2.441rem;
+$h3-font-size: 1.953rem;
+$h4-font-size: 1.563rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
+
+$headings-margin-bottom: 0.75rem;
+
+$headings-font-family: $font-family-headings;
+$headings-font-weight: map.get($HeadingFont, 'weight');
+$headings-color: $light;
+$headings-letter-spacing: -0.0625rem; // ~1px
+
+$h1-line-height: 3rem;
+$h2-line-height: 2.25rem;
+$h3-line-height: 2.25rem;
+$h4-line-height: 2rem;
+$h5-line-height: 1.5rem;
+$h6-line-height: 1.5rem;
+
+$display1-size: 7.451rem;
+$display2-size: 5.96rem;
+$display3-size: 4.768rem;
+$display4-size: 3.815rem;
+
+$display-line-height: 1;
+$display-margin-bottom: 0.75rem;
+
+$paragraphs-margin-bottom: 1.75rem;
+
+$lead-line-height: 1.875rem;
+
+$small-font-size: 80%;
+
+$text-muted: $gray-600;
+
+$blockquote-font-size: 1.5rem;
+$blockquote-footer-font-size: 1.125rem;
+$blockquote-margin-bottom: 0.75rem;
+
+$hr-border-color: rgba($dark, 0.1);
+$hr-border-width: $border-width;
+$hr-margin-y: 1.125rem;
+
+$mark-padding: 0.2em;
+$mark-bg: #fff09e;
+
+// Code
+$code-color: map.get($mojo-red, light);
+$code-font-size: 0.75rem;
+$code-line-height: 1.375rem;
+$code-padding-y: 0.1875rem;
+$code-padding-x: 0.8125rem;
+$code-background-color: rgba(19, 19, 19, 0.8);
+
+$kbd-font-size: 0.75rem;
+$kbd-border-radius: 0.625rem;
+$kbd-box-shadow: none;
+$kbd-padding-y: $code-padding-y;
+$kbd-padding-x: $code-padding-x;
+$kbd-color: $white;
+$kbd-bg: $gray-900;
+
+$nested-kbd-font-weight: $font-weight-bold;
+
+$pre-color: $gray-900;
+$pre-scrollable-max-height: 340px;
+$pre-code-border-radius: 4px;
+$pre-code-background-color: $gray-700;
+$pre-color: $gray-100;
+$pre-font-size: 0.9em;
+$pre-max-height: 460px;
+$pre-margin-bottom: 24px;
+$pre-padding: 16px;
+
+// Image thumbnails
+$thumbnail-bg: $body-bg;
+$thumbnail-border: none;
+$thumbnail-padding: 0;
+$thumbnail-border-radius: $border-radius;
+$thumbnail-box-shadow: none;
+
+@import 'maps';

@@ -1,0 +1,198 @@
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:math';
+@use 'sass:color';
+@use 'sass:meta';
+@use 'sass:string';
+
+// LOAD HUI VARIABLES & MIXINS ETC
+@import 'hui';
+@include fileBanner('App Layout');
+
+.fade-out {
+  animation: fadeOut 2s linear;
+  animation-fill-mode: forwards;
+}
+
+#Huement_Logo {
+  width: 130px;
+  height: auto;
+  display: block;
+  position: relative;
+  margin: 0px auto 0 auto;
+}
+
+.app-layout-old {
+  padding-bottom: 100px;
+
+  .navbar-brand {
+    width: 200px;
+  }
+
+  .nav-link {
+    z-index: 2;
+    line-height: 1.5;
+    position: relative;
+    font-size: 1.25rem;
+
+    &.active {
+      z-index: 2;
+      position: relative;
+      color: $white !important;
+      background-color: $primary;
+      border-radius: 6px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 0;
+        z-index: 0;
+        background-color: $primary;
+        left: 0;
+      }
+    }
+
+    p {
+      color: $indigo;
+
+      &:hover {
+        color: $blue !important;
+      }
+    }
+
+    &:hover {
+      color: $blue !important;
+    }
+
+    // svg {
+    //   height: 300px;
+    //   width: 300px;
+    //   overflow: hidden;
+    //   margin: 0 auto;
+    // }
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.chirp-stream {
+  margin-top: 100px;
+}
+
+.text-muted {
+  color: hsl(0, 0%, 62%) !important;
+}
+
+h2.no-span {
+  display: table;
+  white-space: nowrap;
+  &:before,
+  &:after {
+    border-top: 1px solid #222222;
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 0.5em;
+    width: 45%;
+  }
+  &:before {
+    right: 1.5%;
+  }
+  &:after {
+    left: 1.5%;
+  }
+}
+
+/*
+ * Main Content
+ */
+
+#Layer_1 {
+  height: 40px;
+}
+
+.app-layout {
+  .dashboard-menu {
+    margin-top: 2rem;
+    height: 3rem;
+  }
+  .dashboard-title {
+    line-height: 1;
+    font-size: 3rem;
+  }
+
+  .app-layout-main {
+    min-height: 100vh;
+  }
+}
+
+/*
+ * Sidebar
+ */
+
+.bg-body-tertiary {
+  --bs-bg-opacity: 1;
+  background-color: $mono-300;
+}
+
+@media (min-width: 768px) {
+  .sidebar .offcanvas-lg {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 48px;
+  }
+  .navbar-search {
+    display: block;
+  }
+}
+
+.sidebar {
+  hr {
+    border-color: $mono-800;
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  .nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $cyan-700;
+
+    &.active {
+      color: $blue-700;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.sidebar-heading {
+  font-size: 0.75rem;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
+}
+
+.navbar .form-control {
+  padding: 0.75rem 1rem;
+}
