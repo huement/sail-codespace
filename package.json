@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "dev:pm2": "pm2 start \"./vendor/bin/sail npm run dev\" --name sailApp",
+    "dev:pm2": "./node_modules/.bin/pm2 start \"./vendor/bin/sail npm run dev\" --name sailApp",
     "scss": "sass --quiet-deps --load-path=node_modules --style expanded --source-map --embed-sources --no-error-css resources/sass:public/test",
     "format": "npx prettier --write resources/",
     "format:all": "npx prettier --write .",
@@ -47,6 +47,7 @@
     "lodash": "^4.17.21",
     "masonry-layout": "^4.2.2",
     "noisejs": "^2.1.0",
+    "pm2": "^6.0.6",
     "prismjs": "^1.30.0",
     "simple-parallax-js": "^6.0.1",
     "simplex-noise": "^4.0.3"
