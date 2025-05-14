@@ -6,13 +6,6 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['@huement/cosmicwave']
   },
-  server: {
-    host: '0.0.0.0',
-    hmr: { host: 'localhost' },
-    proxy: {
-      '/0.0.0.0': 'http://localhost'
-    }
-  },
   resolve: {
     alias: {
       '~': path.resolve(__dirname, 'node_modules'),
